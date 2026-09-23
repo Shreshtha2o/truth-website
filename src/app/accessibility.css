@@ -1,0 +1,58 @@
+/* Site-wide accessibility layer. No dependency on the particle engine. */
+
+.accessibility-skip-link {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 999px;
+  background: rgba(8,8,10,.94);
+  color: #fff;
+  font: 600 12px/1.1 system-ui, sans-serif;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-150%);
+  transition: transform .22s ease, background .22s ease;
+}
+
+.accessibility-skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+:where(a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid rgba(255,255,255,.95);
+  outline-offset: 4px;
+}
+
+:where(button, a) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html[data-input-mode="keyboard"] :where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus {
+  outline: 2px solid rgba(255,255,255,.9);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accessibility-skip-link {
+    transition: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .accessibility-skip-link {
+    left: 12px;
+    top: 12px;
+    min-height: 42px;
+    padding-inline: 14px;
+    font-size: 11px;
+  }
+}
