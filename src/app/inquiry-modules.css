@@ -1,0 +1,21 @@
+.inquiry-modules{position:relative;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:clamp(90px,12vw,180px) 0;color:#f4f1e9}
+.inquiry-modules__intro{max-width:680px;margin-bottom:54px}
+.inquiry-modules__intro>span{display:block;margin-bottom:18px;font:600 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.22em;opacity:.55}
+.inquiry-modules__intro h2{margin:0;font:400 clamp(44px,6vw,82px)/.94 Georgia,serif;letter-spacing:-.045em}
+.inquiry-modules__intro h2 em{font-style:italic;opacity:.7}
+.inquiry-modules__intro p{max-width:570px;margin:25px 0 0;font:400 16px/1.7 system-ui,sans-serif;color:rgba(244,241,233,.58)}
+.inquiry-modules__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.inquiry-card{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.025);backdrop-filter:blur(12px);transition:border-color .45s ease,background .45s ease,transform .45s ease}
+.inquiry-card:hover{border-color:rgba(255,255,255,.28);transform:translateY(-3px)}
+.inquiry-card.is-open{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.32)}
+.inquiry-card__trigger{position:relative;width:100%;min-height:310px;padding:28px;text-align:left;color:inherit;background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start}
+.inquiry-card__trigger:focus-visible{outline:2px solid rgba(255,255,255,.8);outline-offset:-4px}
+.inquiry-card__eyebrow{font:600 10px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;opacity:.5}
+.inquiry-card__title{margin-top:auto;max-width:310px;font:400 clamp(27px,3vw,42px)/1.02 Georgia,serif;letter-spacing:-.03em}
+.inquiry-card__summary{margin-top:18px;max-width:310px;font:400 14px/1.55 system-ui,sans-serif;color:rgba(244,241,233,.52)}
+.inquiry-card__mark{position:absolute;right:26px;top:24px;font:300 27px/1 system-ui,sans-serif;opacity:.65}
+.inquiry-card__detail{padding:0 28px 30px}
+.inquiry-card__detail p{margin:0;max-width:470px;font:400 15px/1.75 system-ui,sans-serif;color:rgba(244,241,233,.68)}
+.inquiry-card__prompt{display:block;margin-top:24px;font:600 10px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.15em;text-transform:uppercase;opacity:.42}
+@media (max-width:800px){.inquiry-modules{width:min(100% - 28px,620px);padding:80px 0}.inquiry-modules__grid{grid-template-columns:1fr}.inquiry-card__trigger{min-height:240px}}
+@media (prefers-reduced-motion:reduce){.inquiry-card{transition:none}.inquiry-card:hover{transform:none}}

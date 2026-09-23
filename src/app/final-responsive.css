@@ -1,0 +1,28 @@
+
+/* Final responsive integration layer.
+   Intentionally does not override ParticleJourney or its image targets. */
+:root { --safe-vh: 1vh; }
+html { scroll-padding-top: 88px; }
+body { overflow-x: clip; }
+.experience { overflow-x: clip; }
+
+@media (max-width: 1024px) {
+  .question-explorer,
+  .knowledge-atlas,
+  .evidence-explorer,
+  .inquiry-modules { scroll-margin-top: 72px; }
+}
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 72px; }
+  .chapter { min-height: 100svh; }
+  .site-footer { gap: 18px; flex-wrap: wrap; }
+}
+
+@media (max-width: 520px) {
+  .chapter { padding-left: 5vw; padding-right: 5vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}
